@@ -1,3 +1,31 @@
 IP Headroom
 
 Evaluate AWS subnets for size and number/percent of available resources in subnet range
+
+
+AWS Subnets - IP usage information
+Number of IPs in the subnet block.
+Number of IPs IN USE in the subnet block.
+Percentage of IP address space in use.
+
+AWS EC2 with attached Subnets - IP usage information
+For each attached subnet:
+- Number of IPs in the subnet block.
+- Number of IPs IN USE in the subnet block.
+- Percentage of IP address space in use.
+For all attached Subnets
+- Number of IPs across Subnets.
+- Number of IPs IN USE across Subnets.
+- Percentage of IP address space in use across Subnets.
+
+Other resources that may fit.
+ASG
+RDS
+
+
+Modules
+math ?
+ipaddress
+awscli ?
+boto3 ?
+json ?
