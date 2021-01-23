@@ -15,6 +15,7 @@ print("Subnet Size: ", SubnetSize.num_addresses)
 
 #IP = input("IP in format '123.0.0.0'} ")
 cidr = input("CIDR in format '10.0.0.0/24'} ")
-
-SubnetSize = ipaddress.ip_network(cidr)
+SubnetSize = ipaddress.ip_network(cidr, strict=False)
+AWSSubnetSize = SubnetSize.num_addresses - 5
 print("Subnet Size: ", SubnetSize.num_addresses)
+print("AWS Subnet Size: ", AWSSubnetSize)
