@@ -3,6 +3,13 @@ import sys
 import pandas as pd
 import os
 
+## Functions
+def getFreeIPPercent(x,y):
+    return "{:.2%}".format(x / y)
+
+## End Functions
+
+
 ## Dataload
 ## Collect the name of te subnets file.
 ## If none input use the default file name subnets.csv
@@ -18,8 +25,7 @@ else:
 #    else:
 #        print("No file found")
 
-def getFreeIPPercent(x,y):
-    return "{:.2%}".format(x / y)
+
 
 ## load subnets data in to a DataFrame
 df = pd.DataFrame(subnets)
