@@ -27,6 +27,7 @@ ipaddress
 awscli ?
 boto3 ?
 json ?
+pandas - For pandas read JSON
 
 
 Class: resource
@@ -34,3 +35,30 @@ Class: resource
 -ec2
 -rds
 -rds-cluster
+
+
+Data to Evaluate
+subnet ID
+CIDR
+IPsUsed
+
+Calculate:
+SubnetSize - # of IP from CIDR
+UsableIPs - SubnetSize - unusable IPs (5 in AWS)
+AvailIPCount = UsableIPs - IPsUsed
+AvailIPPercent = 1 - (IPsUsed / UsableIPs)
+
+Size of a CIDR
+>>> SubnetSize = ipaddress.ip_network('192.0.2.0/24')
+>>> SubnetSize.num_addresses
+256
+
+Pandas for json
+import pandas as pd
+
+df = pd.read_json('data.json')
+
+print(df.to_string())
+
+Include a graphic
+Table and Bar chart of Percentage of IPs used by subnets

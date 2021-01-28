@@ -1,3 +1,4 @@
+AvailabilityZone,AvailabilityZoneId,AvailableIpAddressCount,CidrBlock,DefaultForAz,MapPublicIpOnLaunch,MapCustomerOwnedIpOnLaunch,State,SubnetId,VpcId,OwnerId,AssignIpv6AddressOnCreation,Ipv6CidrBlockAssociationSet,SubnetArn
 us-east-1d,use1-az2,24,10.205.6.224/27,FALSE,FALSE,FALSE,available,subnet-1f8d4333,vpc-6d304f08,9876543210987,FALSE,[],arn:aws:ec2:us-east-1:1234567890:subnet/subnet-1f8d4333
 us-east-1d,use1-az2,16,10.203.3.192/27,FALSE,FALSE,FALSE,available,subnet-bf655594,vpc-dc314eb9,9876543210987,FALSE,[],arn:aws:ec2:us-east-1:1234567890:subnet/subnet-bf655594
 us-east-1b,use1-az6,27,10.205.7.160/27,FALSE,FALSE,FALSE,available,subnet-9146bfcd,vpc-6d304f08,9876543210987,FALSE,[],arn:aws:ec2:us-east-1:1234567890:subnet/subnet-9146bfcd
