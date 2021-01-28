@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 
 
+## Dataload
 ## Collect the name of te subnets file.
 ## If none input use the default file name subnets.csv
 defsubnetfile = "subnets.csv"
@@ -13,4 +14,8 @@ if not subnetfile:
 else:
     subnets = pd.read_csv(subnetfile)
 
-print(subnets)
+#print(subnets)
+
+## Evaluate data
+## print(cars.price)
+print(subnets.CidrBlock)
