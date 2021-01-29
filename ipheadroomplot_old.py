@@ -2,6 +2,9 @@ import ipaddress
 import sys
 import pandas as pd
 import os
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 ## Functions
 def getFreeIPPercent(x,y):
@@ -101,7 +104,25 @@ for x in subnets.CidrBlock:
 
 ## -->  print("Subnet ID", "CIDR", "CIDR Size", "IP Free IP #", "Free IP %" )
 #######  print(subnets.SubnetId[i].ljust(30, " "), cidr.ljust(20, " "), str(AWSSubnetSize).rjust(10, " "), str(FreeIPCount).rjust(10, " "), FreeIPPercent.ljust(20, " "), sep=" | " )
+'''
   print(subnets.SubnetId[i].ljust(30, " "), cidr.ljust(20, " "), str(f'{AWSSubnetSize:,}').rjust(10, " "), str(f'{UsedIPCount:,}').rjust(10, " "), UsedIPPercent.rjust(8, " "), sep=" | " )
+'''
+
+N = 1
+'''
+x = np.random.rand(N)
+y = np.random.rand(N)
+'''
+x = AWSSubnetSize
+y = UsedIPCount
+colors = np.random.rand(N)
+'''
+area = (30 * np.random.rand(N))**2  # 0 to 15 point radii
+plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+'''
+plt.scatter(x, y, c=colors, alpha=0.5)
+plt.show()
+
 
 ## f'{value:,}'
 
@@ -115,4 +136,6 @@ for x in subnets.CidrBlock:
 
 ##  if i == 3:
 ##    break
+'''
   i += 1
+'''
