@@ -54,7 +54,8 @@ else:
 print("=-" * 20, "=", sep="")
 print("Subnet ID", "CIDR", "CIDR Size", "IP Free IP #", "Free IP %", sep=" | ")
 i = 0
-while i < 3:
+#while i < 3:
+for x in subnets:
 ##  print(i)
 ## -->  print("=-" * 20, "=", sep="")
 ## -->    print("Subnet #: ", i)
