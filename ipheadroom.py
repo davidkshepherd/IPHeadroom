@@ -133,23 +133,23 @@ if showbar not in ('n', 'N'):
     y = FreeIPCountList
     x = cidrList
 #    plt.figure(figsize=(10,8))
-    fig= plt.figure(figsize=(9,7))
+    fig= plt.figure(figsize=(11,7))
     plt.barh(x,y)
     plt.xlabel("Free IPs")
     plt.ylabel("CIDR")
     plt.show()
-else:
-    print("OK.  Maybe next time?")
+#else:
+#    print("OK.  Maybe next time?")
 
 ## Set up Scatter Chart
 if showscatter not in ('n', 'N'):
     x = UsedIPCountList
     y = FreeIPCountList
     colors = np.random.rand(i)
-    fig= plt.figure(figsize=(9,7))
+    fig= plt.figure(figsize=(11,7))
     plt.scatter(x, y, c=colors, alpha=0.5)
     plt.xlabel("Used IP Count")
     plt.ylabel("Free IP Count")
     plt.show()
-else:
-    print("OK.  Maybe next time?")
+#else:
+#    print("OK.  Maybe next time?")
