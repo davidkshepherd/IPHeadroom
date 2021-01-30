@@ -62,13 +62,14 @@ print("")
 print("=" * 46, " Results ", "=" * 46)
 
 
-
+## Use the dafukt subnets file or the requested file
 if not subnetfile:
     subnets = pd.read_csv(defaultsubnetsfile)
 else:
     subnets = pd.read_csv(subnetfile)
 
 i = 0
+## loop through the csv to get values, create more values and add to your lists
 #while i < 3:
 for x in subnets.CidrBlock:
     cidr = subnets.CidrBlock[i]
@@ -111,7 +112,7 @@ for x in subnets.CidrBlock:
     ## -->  print("Used IP Percent: ", UsedIPPercent)
 
 
-## loop through the csv get get valuse, create more values and add to your lists
+## Create report as we loop through the
 ##    print(UsedIPCountList[i])
 #    showtable = input("Do you want to see a Results Table?  Y/N: ")
     if showtable not in ('n', 'N'):
